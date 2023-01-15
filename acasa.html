@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acasa</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/script.js" defer></script>
+    <!-- Aplicam stilul elementului cu atributul href care contine... -->
+    <style>
+        .nav-menu .nav-link[href^="acasa"]{
+            color:red;
+            letter-spacing:2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Meniu Navigatie -->
+    <nav>
+        <ul class="nav-menu">
+            <li>
+                <a href="acasa.html" class="nav-link">Acasa</a>
+            </li>
+            <li>
+                <a href="catalog.html" class="nav-link">Catalog</a>
+            </li>
+            <li>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <span id="mode-toggle"></span>
+    </nav>
+    <!-- Meniu Navigatie -->
+
+    <!-- Sectiune Jumbotron -->
+    <div class="jumbotron-section">
+        <div class="overlay"></div>
+        <h1>Site-ul <b>meu</b></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum minus assumenda ipsa odio atque quibusdam consequatur, magni ad ut itaque, saepe dolorum et modi, eum eaque totam sequi. Nemo, quia?</p>
+    </div>
+    <!-- Sectiune Jumbotron -->
+
+    <!-- Page Content -->
+    <section class="page-content">
+        <div class="page-content--text">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In inventore animi adipisci nam magnam hic repudiandae dignissimos ipsum illo possimus, labore laudantium, vitae ipsam cum unde, nulla beatae corrupti nostrum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis est consectetur, deleniti, earum necessitatibus praesentium et eum consequatur quod blanditiis quidem consequuntur adipisci aspernatur fugiat, ullam perspiciatis nesciunt repudiandae dicta.</p>
+        </div>
+        <img src="https://source.unsplash.com/800x450/?computer" alt="Side Image" class="page-content--img">
+    </section>
+    <!-- End Page Content -->
+
+    <!-- Sectiune Carduri -->
+    <section class="cards-container">
+        <h2>Proiectele mele</h2>
+        <ul class="cards-list">
+           
+        </ul>
+    </section>
+    <!-- END Sectiune Carduri -->
+
+    <!-- Sectiune Footer -->
+    <footer>
+        <p>Copyright 2022</p>
+    </footer>
+    <!-- End Sectiune Footer -->
+    <!-- import Firebase -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+        import { getDatabase, ref, child, get} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDAoxcTaKBhiBj36pDtpFrG1F-Cl6n9mRs",
+          authDomain: "proiect-c8acd.firebaseapp.com",
+          projectId: "proiect-c8acd",
+          storageBucket: "proiect-c8acd.appspot.com",
+          databaseURL: "https://proiect-c8acd-default-rtdb.europe-west1.firebasedatabase.app",
+          messagingSenderId: "574908264553",
+          appId: "1:574908264553:web:ef973bafb9d16196ae32f8"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        // initializam baza de date
+        const database = getDatabase(app)
+        // referinta catre baza de date
+        const dbRef = ref(database);
+        
+        get(child(dbRef, 'proiecte'))
+        .then(function (data){
+            if(data.exists()){
+                const listaProiecte = data.val()
+                console.log(listaProiecte)
+
+                // Pentru fiecare proiect din lista, generam un card folosind functia generate Card din script.js
+                listaProiecte.forEach(function(project){
+                    generateCard(project)
+                })
+                    
+            }
+            else{
+                console.log('no data available')
+            }
+        })
+
+        .catch(function(error){
+            console.log(error)
+        })
+
+      </script>
+
+</body>
+</html>

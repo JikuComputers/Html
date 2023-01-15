@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Joc mate</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div id="game">
+            <div class="dificltate">
+                <button onclick="newGame(10)">Easy</button>
+                <button onclick="newGame(100)">Medium</button>
+                <button onclick="newGame(1000)">Hard</button>
+            </div>
+            <div class="canvas">
+                <p>
+                    Scor: <span id="scor"></span>
+                </p>
+                <p id="problema"></p>
+                <input type="number" id="rezultat" placeholder="Rezultat">
+            </div>
+        </div>
+    </body>
+</html>

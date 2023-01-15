@@ -1,0 +1,46 @@
+{
+    "proiecte": [
+    {
+        "nume": "X si 0",
+        "descriere": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem magnam quia sapiente autem quaerat et explicabo impedit tempore. Perspiciatis, laboriosam! Corrupti perspiciatis voluptates nesciunt iste hic! Sit consectetur dolorem ratione!",
+        "limbajeDeProgramare":["HTML", "JavaScript","CSS"],
+        "imagine":"img/X-si-O.png",
+        "link":"proiecte/x si o/index.html"
+    },
+    {
+        "nume": "Joc Matematica",
+        "descriere": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem magnam quia sapiente autem quaerat et explicabo impedit tempore. Perspiciatis, laboriosam! Corrupti perspiciatis voluptates nesciunt iste hic! Sit consectetur dolorem ratione!",
+        "limbajeDeProgramare":["HTML", "JavaScript","CSS"],
+        "imagine":"img/Joc-Matematica.png",
+        "link":"proiecte/Joc matematica/index.html"
+    },
+    {
+        "nume": "Memory Game",
+        "descriere": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem magnam quia sapiente autem quaerat et explicabo impedit tempore. Perspiciatis, laboriosam! Corrupti perspiciatis voluptates nesciunt iste hic! Sit consectetur dolorem ratione!",
+        "limbajeDeProgramare":["HTML", "JavaScript","CSS"],
+        "imagine":"img/Memory-Game.png",
+        "link":"proiecte/Memory Game/index.html"
+    },
+    {
+        "nume": "Backround Generator",
+        "descriere": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem magnam quia sapiente autem quaerat et explicabo impedit tempore. Perspiciatis, laboriosam! Corrupti perspiciatis voluptates nesciunt iste hic! Sit consectetur dolorem ratione!",
+        "limbajeDeProgramare":["HTML", "JavaScript","CSS"],
+        "imagine":"img/Backround-Generator.png",
+        "link":"proiecte/Backround Generator/index.html"
+    },
+    {
+        "nume": "Animatie Craciun",
+        "descriere": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem magnam quia sapiente autem quaerat et explicabo impedit tempore. Perspiciatis, laboriosam! Corrupti perspiciatis voluptates nesciunt iste hic! Sit consectetur dolorem ratione!",
+        "limbajeDeProgramare":["HTML", "JavaScript","CSS"],
+        "imagine":"img/Animatie-Craciun.png",
+        "link":"proiecte/Animatie Craciun/index.html"
+    },
+    {
+        "nume": "Animatie",
+        "descriere": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem magnam quia sapiente autem quaerat et explicabo impedit tempore. Perspiciatis, laboriosam! Corrupti perspiciatis voluptates nesciunt iste hic! Sit consectetur dolorem ratione!",
+        "limbajeDeProgramare":["HTML","CSS"],
+        "imagine":"img/Animatie.png",
+        "link":"proiecte/Animatie/index.html"
+    }
+    ]
+}

@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+    color:rgb(0, 0, 0);
+    height: 100vh;
+    margin:0;
+    background:linear-gradient(to right, rgb(1, 92, 168), rgb(53, 254, 153));;
+}
+h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding-top: 20px;
+    text-transform:uppercase;
+    padding-bottom: 20px;
+}
+h3 {
+    font:900 1em 'Raleway', 'sans-serif';
+    text-align: center;
+    user-select: all;
+    text-transform:lowercase;
+}
+button{
+    font-weight:bold;
+    background-color:white;
+    border: 1px solid black;
+    height:80px;
+    width:100px;
+    border-radius: 50%;
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
+}
+button:hover{
+    transform: rotate(360deg);
+    background-color: rgb(129, 129, 129);
+}
